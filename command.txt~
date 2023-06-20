@@ -1,0 +1,23 @@
+START_MISSION "aa
+bb"
+
+PAUSE_MISSION bb
+
+
+# with open('command.txt', 'r') as f:
+#     aa = f.readlines()
+
+command.status="WAITING"
+system.status="UNINTIALIZED"
+
+command.status="ACCEPTED"
+system.status="WAITING"
+
+START-INITIALIZATION
+
+START-MISSION {"metadata":{"container_id":"1","item_ids":[1,2,3]},"item":{"dimensions":[2500,1500,3000],"weight":10},"pick":{"location":{"zone":1,"container":{"width":2500,"height":1500,"depth":1000,"subdivisions":{"width":4,"height":2}},"position":{"x":0,"y":1,"index":4}},"qty":1},"identify":{"location":{"zone":1,"container":{"width":2500,"height":1500,"depth":1000,"subdivisions":{"width":4,"height":2}},"position":{"x":0,"y":1,"index":4}},"pause":true},"place":{"locations":[{"zone":4,"container":{"width":2500,"height":1500,"depth":1000,"subdivisions":{"width":4,"height":2}},"position":{"x":0,"y":1,"index":4}}]}}
+
+
+START-MISSION {"pick":{"location":{"zone":1,"container":{"width":2500,"height":1500,"depth":1000,"subdivisions":{"width":4,"height":2}},"position":{"x":0,"y":1,"index":4}},"qty":1},"position":{"x":0,"y":1,"index":4}},"pause":true},"place":{"locations":[{"zone":4,"container":{"width":2500,"height":1500,"depth":1000,"subdivisions":{"width":4,"height":2}},"position":{"x":0,"y":1,"index":4}}]}}
+
+START-MISSION metadata(container_id=1,item_ids=1|2|3) item(dimensions=1500|1500|3000,weight=9) pick(zone=2,container=2500|1500|3000|4|2,position=0|1|4,qty=1) identify(zone=2,container=2500|1500|1000|4|2,position=0|1|4,pause=0) place(zone=2,container=2500|1500|3000|4|2,position=0|1|4,qty=1) place(zone=3,container=2500|1500|3000|4|2,position=0|1|4,qty=2)
